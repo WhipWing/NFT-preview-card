@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*text / fonts */
+  --font-size: 15px;
+  /*colors*/
+  --white: rgb(255, 255, 255);
+  --gray: rgb(214, 226, 240);
+  --blue-light: rgb(123, 135, 157);
+  --blue-dark: rgb(31, 51, 81);
+  /*spaces*/
+  --border-radius: 18px;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  padding: 15% 0;
+  font-family: "Outfit", sans-serif;
+  font-size: var(--font-size);
+  font-weight: 400;
+  background-color: var(--gray);
+}
+
+.main {
+  min-height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 322px;
+  padding: 3px;
+  background-color: var(--white);
+  border-radius: calc(var(--border-radius) / 2);
+}
+
+.wrapper .qr-code {
+  tex-align: center;
+  padding: 22px 16px;
+}
+
+.qr-code img {
+  max-width: 100%;
+  display: block;
+  background: no-repeat center / cover;
+  border-radius: calc(var(--border-radius) /2);
+  -webkit-transition: all 1000ms;
+}
+
+.qr-code:hover img {
+  filter: brightness(.9);
+  transition: all 1000ms;
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.wrapper .text-area {
+  text-align: center;
+  padding: 22px 10px;
+}
+
+.text-area h1 {
+  font-size: 22px;
+  color: var(--blue-dark);
+  margin-bottom: 16px;
+}
+
+.text-area p {
+  color: var(--blue-light);
+  font-size: var(--font-size);
+  line-height: 1.3;
+}
+
